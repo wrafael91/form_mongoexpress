@@ -1,0 +1,35 @@
+<%- include ('partials/_header')%>
+<pre>
+    <%= saveInfo_ %>
+</pre>    
+
+    <div class="container">
+        <div class="row">
+            <!-- FORM -->
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/add" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" placeholder="Insert your name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email-address</label>
+                                <input type="email" name="email" placeholder="Insert your email-address" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" name="country" placeholder="Country" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<%- include ('partials/_footer')%>
