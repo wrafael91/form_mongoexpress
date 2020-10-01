@@ -1,10 +1,11 @@
 <%- include ('partials/_header')%>
 <!-- LIST -->
 <div class="col-md-8">
-    <form action="/info" method="GET">
+    <form action="/datainfo" method="GET">
         <table class="table table-bordered table hover">
             <thead>
                 <tr>
+                    <th>N°</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Country</th>
@@ -16,6 +17,8 @@
                     <tr>
                         <td><%= i + 1 %></td>
                         <td><%= saveInfo_[i].name %></td>
+                        <td><%= saveInfo_[i].email %></td>
+                        <td><%= saveInfo_[i].country %></td>
                     </tr>
     
                 <% } %>
