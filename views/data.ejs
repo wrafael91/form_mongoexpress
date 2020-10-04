@@ -1,35 +1,31 @@
 <%- include ('partials/_header')%>
 <!-- LIST -->
-<div class="col-md-8">
+<div class="col-md-10 offset-md-1">
     <form action="/datainfo" method="GET">
         <table class="table table-bordered table hover">
             <thead>
                 <tr>
                     <th>N°</th>
                     <th>Name</th>
+                    <th>Lastname</th>
                     <th>Email</th>
+                    <th>Password</th>
                     <th>Country</th>
                 </tr>
-    
             </thead>
             <tbody>
                 <% for (let i = 0; i < saveInfo_.length; i++) { %>
                     <tr>
                         <td><%= i + 1 %></td>
                         <td><%= saveInfo_[i].name %></td>
+                        <td><%= saveInfo_[i].lastname %></td>
                         <td><%= saveInfo_[i].email %></td>
+                        <td><%= saveInfo_[i].password %></td>
                         <td><%= saveInfo_[i].country %></td>
                     </tr>
-    
                 <% } %>
-                
-    
             </tbody>
-    
         </table>
     </form>
-    
 </div>
-
-
 <%- include ('partials/_footer')%>
